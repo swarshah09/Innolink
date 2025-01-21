@@ -1,9 +1,4 @@
 # Build and Deploy a Github-like App | React, MongoDB, Express.js, Passport.js
-
-![Demo App](https://i.ibb.co/xfpddW2/Screenshot-22.png)
-
-[Video Tutorial on Youtube](https://youtu.be/P6UyvDhNTbg)
-
 Some Features:
 
 -   ⚙️ Tech stack: MERN + TailwindCSS + Github API
