@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-	background: linear-gradient(to bottom right, rgba(0, 0, 0, 50), rgb(69, 15, 208));
+	background-image: url('/fgd.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -34,3 +34,6 @@ body {
 		hover:bg-gray-600/10 border border-gray-800 text-white;
 	}
 }
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* css for code */

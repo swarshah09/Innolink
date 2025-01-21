@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import toast from "react-hot-toast";
-
 import ProfileInfo from "../components/ProfileInfo";
 import Repos from "../components/Repos";
 import Search from "../components/Search";
@@ -65,16 +64,15 @@ const HomePage = () => {
 	};
 
 	return (
-		<div className='m-4'>
+		<div className='m-4 relative'>
 			<Search onSearch={onSearch} />
 			{repos.length > 0 && <SortRepos onSort={onSort} sortType={sortType} />}
 			<div className='flex gap-4 flex-col lg:flex-row justify-center items-start'>
 				{userProfile && !loading && <ProfileInfo userProfile={userProfile} />}
-
 				{!loading && <Repos repos={repos} />}
 				{loading && <Spinner />}
 			</div>
 		</div>
-	);
+	);	
 };
 export default HomePage;

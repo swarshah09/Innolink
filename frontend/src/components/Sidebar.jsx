@@ -6,7 +6,8 @@ import { PiSignInBold } from "react-icons/pi";
 import { MdEditDocument } from "react-icons/md";
 import Logout from "./Logout";
 import { useAuthContext } from "../context/AuthContext";
-
+import { IoChatboxEllipses } from "react-icons/io5";
+import { FaCode } from "react-icons/fa";
 
 const Sidebar = () => {
 	const { authUser } = useAuthContext();
@@ -18,7 +19,7 @@ const Sidebar = () => {
 		>
 			<nav className='h-full flex flex-col gap-3'>
 				<Link to='/' className='flex justify-center'>
-					<img className='h-8' src='/github.svg' alt='Github Logo' />
+					<img className='h-8' src='/sslg.png' alt='Github Logo' />
 				</Link>
 
 				<Link
@@ -66,7 +67,29 @@ const Sidebar = () => {
 				)}
 
 				{!authUser && (
-					<div className='flex flex-col gap-2 mt-auto'>					
+					<a
+						href="https://msgsmpl.onrender.com" // Replace this with your desired URL
+						target="_blank" // Opens the link in a new tab
+						rel="noopener noreferrer" // Ensures security for external links
+						className="p-1.5 focus:outline-none transition-colors duration-200 rounded-lg hover:bg-gray-800"
+					>
+						<IoChatboxEllipses size={25} />
+					</a>
+				)}
+
+				{!authUser && (
+					<a
+						href="http://localhost:8001/" // Replace this with your desired URL
+						target="_blank" // Opens the link in a new tab
+						rel="noopener noreferrer" // Ensures security for external links
+						className="p-1.5 focus:outline-none transition-colors duration-200 rounded-lg hover:bg-gray-800"
+					>
+						<FaCode size={25} />
+					</a>
+				)}
+
+				{!authUser && (
+					<div className='flex flex-col gap-2 mt-auto'>
 						<Logout />
 					</div>
 				)}
